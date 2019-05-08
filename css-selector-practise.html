@@ -90,6 +90,41 @@
         .b ul li:nth-child(n+35):nth-last-child(n+51){
             color: blue;
         }
+        .prime ul li:first-child {
+        color: blue;
+      }
+      .prime ul li {
+        color: red;
+      }
+
+      .prime ul li:nth-child(2n) {
+        color: black;
+      }
+
+      .prime ul li:nth-child(3n) {
+        color: black;
+      }
+
+      .prime ul li:nth-child(5n) {
+        color: black;
+      }
+
+      .prime ul li:nth-child(7n) {
+        color: black;
+      }
+
+      .prime ul li:nth-child(2) {
+        color: red;
+      }
+      .prime ul li:nth-child(3) {
+        color: red;
+      }
+      .prime ul li:nth-child(5) {
+        color: red;
+      }
+      .prime ul li:nth-child(7) {
+        color: red;
+      }
     </style>
     <div class="a">
       <p>让下面的4567元素为红色</p>
@@ -331,26 +366,6 @@
       </ul>
     </div>
     <script>
-    var lis = document.querySelectorAll('.prime li');
-	for(var i=2;i<=100;i++){
-		var judge=true;
-		for(var j=2;j<i;j++){
-			if(i%j==0){
-				judge=false;
-			}
-		}
-		if(judge){
-			lis[i-1].style.color="red";
-		}
-	}
-	for(var a=2;a<=100;a++){
-		for(b=2;b<a;b++){
-			if(a%b==0){
-				lis[a-1].style.color="blue";
-			}
-		}
-	}
-
     </script>
   </body>
 </html>
