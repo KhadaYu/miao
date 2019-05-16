@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<style type="text/css">
+body{
+	background-color: black;
+}
+div{
+	width: 200px;
+	height: 200px;
+	margin: 300px auto;
+	border: 1px solid white;
+}
+input{
+	display: none;
+}
+label{
+	display: block;
+	width: 68px;
+	height: 40px;
+	position: relative;
+	background-color: white;
+	margin: auto;
+	top: 50%;
+	margin-top: -50px;
+	border-radius: 20px;
+	transition: background-color 0.3s linear;
+}
+input:checked + label{
+	background-color: #77E371;
+}
+label::before{
+	width: 40px;
+	height: 40px;
+	content: '';
+	position: absolute;
+	border-radius: 20px;
+	box-shadow: 0 1px 3px rgba(0,0,0, 255);
+	background: white;
+	transition: all 0.3s linear;
+}
+input:checked + label::before{
+	transform: translateX(28px);
+}
+
+</style>
+<div class="iosCheckbox">
+	<input type="checkbox" name="ios" id="iosCheck"/>
+	<label for="iosCheck">
+	</label>
+</div>
+</body>
+</html>
