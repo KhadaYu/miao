@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul{
+	width: 60px;
+}
+li{
+	width: 50px;
+	height: 16px;
+	line-height: 16px;
+	background: pink;
+	padding: 5px;
+	
+}
+li ul li{
+	transition: opacity 0.2s linear;
+	opacity: 0;
+	
+}
+ul ul{
+	position: relative;
+	left: 55px;
+	top: -21px;
+	pointer-events:none;
+}
+li:hover{
+	background-color: orange;
+}
+li:hover>ul>li{
+	opacity: 1;
+	pointer-events:auto;
+}
+ul ul::before{
+	display: block;
+	position: absolute;
+	content: '>';
+	left: -15px;
+	top: 4px;
+}
+</style>
+</head>
+<body>
+<ul>
+	<li>
+		文件
+		<ul>
+			<li>
+				打开
+				<ul>
+					<li>
+						打开
+						<ul>
+							<li>打开</li>
+							<li>保存</li>
+							<li>另存为</li>
+						</ul>
+					</li>
+					<li>保存</li>
+					<li>另存为</li>
+				</ul>
+			</li>
+			<li>
+				保存
+				<ul>
+					<li>打开</li>
+					<li>保存</li>
+					<li>另存为</li>
+				</ul>
+			</li>
+			<li>另存为</li>
+		</ul>
+	</li>
+	<li>
+		编辑
+		<ul>
+			<li>打开</li>
+			<li>保存</li>
+			<li>另存为</li>
+		</ul>
+	</li>
+	<li>查找</li>
+	<li>选择</li>
+</ul>
+</body>
+</html>
