@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: white;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	background-color: orange;
+}
+.main{
+	width: 1226px;
+	height: 460px;
+	margin: 30px auto;
+	position: relative;
+	overflow: hidden;
+}
+/*焦点图*/
+.banner{
+	width: 1226px;
+	height: 460px; 
+	overflow: hidden;
+}
+.banner-slide{
+	width: 1226px;
+	height: 460px;
+	float: left;
+	display: none;
+}
+.slide-active{
+	display:block;
+}
+.slide1{
+	background-image: url(https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg);
+}
+.slide2{
+	background-image: url(https://i1.mifile.cn/a4/xmad_15529884424562_HKYaG.jpg);
+}
+.slide3{
+	background-image: url(https://i1.mifile.cn/a4/xmad_15579184778872_ECdvK.jpg);
+}
+.slide4{
+	background-image: url(https://i1.mifile.cn/a4/xmad_15548066591437_Stxlj.jpg);
+}
+.slide5{
+	background-image: url(https://i1.mifile.cn/a4/xmad_15476942061027_STEvM.jpg);
+}
+.button{
+	width: 41px;
+	height: 70px;
+	background:url(arrow.png) center center no-repeat;
+	background-color: rgba(0,0,0,0.6);
+	transform:rotate(180deg);
+	position: absolute;
+	left: 234px;
+	top: 50%;
+	width: 40px;
+	height: 80px;
+	margin-top: -35px;
+}
+.next{
+	left: auto;
+	right: 0;
+	transform:rotate(360deg);
+}
+.dotts {
+	position: absolute;
+	bottom: 24px;
+	right: 0;
+	text-align: right;
+	padding-right: 24px;
+	line-height: 12px;
+}
+.dotts span{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin-left: 8px;
+	background-color: rgba(7, 17, 27, 0.4);
+	cursor: pointer;
+	box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset;
+}
+.dotts span.active{
+	box-shadow: 0 0 0 2px rgba(7, 17, 27, 0.4) inset;
+	background-color: #ffffff;
+}
+/*主菜单背景*/
+.menu-box{
+	background-color: rgba(7,12,27,0.5);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 234px;
+	height: 460px;
+	z-index: 1;
+}
+/*主菜单*/
+.menu-content{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 234px;
+	height: 460px;
+	z-index: 2;
+}
+.menu-item{
+	height: 460px;
+	padding: 20px 0 20px 0;
+}
+.menu-item>li{
+	width: 204px;
+	height: 42px;
+	padding-left: 30px;
+}
+/*https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg
+https://i1.mifile.cn/a4/xmad_15529884424562_HKYaG.jpg
+https://i1.mifile.cn/a4/xmad_15579184778872_ECdvK.jpg
+https://i1.mifile.cn/a4/xmad_15548066591437_Stxlj.jpg
+https://i1.mifile.cn/a4/xmad_15476942061027_STEvM.jpg*/
+</style>
+</head>
+<body>
+
+<div class="main">
+	<!-- 主菜单背景 -->
+	<dir class="menu-box"></dir>
+	<!-- 主菜单 -->
+	<div class="menu-content">
+		<ul class="menu-item">
+			<li><a href=""><span>手机 电话卡</span>&gt;</a></li>
+			<li><a href=""><span>电视 盒子</span>&gt;</a></li>
+			<li><a href=""><span>笔记本 平板</span>&gt;</a></li>
+			<li><a href=""><span>家电 插线板</span>&gt;</a></li>
+			<li><a href=""><span>出行 穿戴</span>&gt;</a></li>
+			<li><a href=""><span>智能 路由器</span>&gt;</a></li>
+			<li><a href=""><span>电源 配件</span>&gt;</a></li>
+			<li><a href=""><span>健康 儿童</span>&gt;</a></li>
+			<li><a href=""><span>耳机 音箱</span>&gt;</a></li>
+			<li><a href=""><span>生活 箱包</span>&gt;</a></li>
+		</ul>
+	</div>
+	<!-- 焦点图 -->
+	<div class="banner">
+		<a href="">
+			<div class="banner-slide slide1 slide-active"></div>
+		</a>
+		<a href="">
+			<div class="banner-slide slide2"></div>
+		</a>
+		<a href="">
+			<div class="banner-slide slide3"></div>
+		</a>
+		<a href="">
+			<div class="banner-slide slide4"></div>
+		</a>
+		<a href="">
+			<div class="banner-slide slide5"></div>
+		</a>
+		<a href="#" class="button pre"></a>
+		<a href="#" class="button next"></a>
+		<div class="dotts">
+			<span class="active"></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+var index=0,
+	pre=document.querySelector(".pre"),
+	next=document.querySelector(".next"),
+	pics=document.querySelectorAll(".banner-slide"),
+	size=pics.length,
+	dotts=document.querySelectorAll(".dotts span");
+
+
+next.addEventListener("click",function(){
+	index++;
+	if(index>=size){
+		index=0;
+	}
+	changeImg();
+})
+pre.addEventListener("click",function(){
+	index--;
+	if(index<0){
+		index=size-1;
+	}
+	changeImg();
+})
+
+function changeImg(){
+	for(var i=0;i<size;i++){
+		pics[i].style.display="none";
+		dotts[i].className="";
+	}
+	pics[index].style.display="block";
+	dotts[index].className="active";
+}
+// 原点
+for(var y=0;y<size;y++){
+	dotts[y].setAttribute("data",y);
+	dotts[y].addEventListener("click",function(){
+		index=this.getAttribute("data");
+		changeImg();
+	})
+}
+</script>
+</body>
+</html>
