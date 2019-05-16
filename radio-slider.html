@@ -35,7 +35,7 @@ a:hover{
 	display: none;
 }
 .slide-active{
-	display:block;
+	display: block;
 }
 .slide1{
 	background-image: url(https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg);
@@ -120,6 +120,30 @@ a:hover{
 	height: 42px;
 	padding-left: 30px;
 }
+/*动画*/
+@keyframes fadeInFromNone {
+    0% {
+        display: none; 
+        opacity: 0;		
+    }
+	25%{
+		display: block;
+        opacity: 0.25;
+	}
+    50% {
+        display: block;
+        opacity: 0.5;
+    }
+	75%{
+		display: block;
+        opacity: 0.75;
+	}
+    100% {
+        display: block;		
+        opacity: 1;			
+    }
+}
+
 /*https://i1.mifile.cn/a4/xmad_15566146318197_mAghl.jpg
 https://i1.mifile.cn/a4/xmad_15529884424562_HKYaG.jpg
 https://i1.mifile.cn/a4/xmad_15579184778872_ECdvK.jpg
@@ -201,10 +225,12 @@ pre.addEventListener("click",function(){
 
 function changeImg(){
 	for(var i=0;i<size;i++){
+		
 		pics[i].style.display="none";
-		dotts[i].className="";
+		dotts[i].className="";	
 	}
 	pics[index].style.display="block";
+	pics[index].style.animation="fadeInFromNone 1s linear";
 	dotts[index].className="active";
 }
 // 原点
