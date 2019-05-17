@@ -5,9 +5,7 @@
 </head>
 <body>
 <style type="text/css">
-body{
-	background-color: black;
-}
+
 div{
 	width: 200px;
 	height: 200px;
@@ -26,11 +24,14 @@ label{
 	margin: auto;
 	top: 50%;
 	margin-top: -50px;
+	border: 1px solid #ddd;
 	border-radius: 20px;
 	transition: background-color 0.3s linear;
+	transition: box-shadow 0.3s linear;
 }
 input:checked + label{
-	background-color: #77E371;
+	border-color: #77E371;
+	box-shadow: 0 0 0 20px #77E371 inset;
 }
 label::before{
 	width: 40px;
