@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+* {
+  background-color: rgba(0,0,0,0.08);
+}
+
+html,body {
+  height: 100%;
+  margin: 0;
+}
+div {
+  height: 100%;
+  font-size: 0;
+}
+div * {
+  font-size: 16px;
+}
+div > aside {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+}
+div > main {
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+  background-color: tan;
+  position: relative;
+}
+
+.a {
+  background-color: red;
+}
+.b {
+  background-color: lightgreen;
+}
+.c {
+  background-color: lightblue;
+}
+
+header {
+  background-color: blue;
+  width: 100%;
+}
+header .placeholder {
+  padding-top: 20%;
+}
+main .content {
+  top: 0;
+  margin-top: 20%;
+  background-color: olive;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+</style>
+</head>
+<body>
+  <div>
+    <aside class="a"></aside>
+    <main>
+      <header>
+        <div class="placeholder"></div>
+      </header>
+      <div class="content">aaaa</div>
+    </main>
+    <aside class="b"></aside>
+    <aside class="c"></aside>
+  </div>
+</body>
+</html>
