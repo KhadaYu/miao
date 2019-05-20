@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+html,body{
+	height: 100%;
+
+}
+html{
+	overflow: hidden;
+}
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	
+}
+a:link,.link:hover{
+	text-decoration: none;
+	color: #D7DFEA;
+}
+a:visited{
+	color: #D7DFEA;
+}
+a:hover{
+	text-decoration: underline;
+}
+/*头部*/
+.top{
+	background-color: #354b66;
+	width: 100%;
+	height: 66px;
+	position: relative;
+}
+.logo{
+	display: inline-block;
+	vertical-align: middle;
+}
+.topLeft{
+	display: inline-block;
+	vertical-align: middle;
+}
+.topLeft p span{
+	font-weight: bold;
+	color: #D7DFEA;
+}
+.topLeft span,.topRight span{
+	color: #D7DFEA;
+}
+.topLeft .link{
+	cursor: pointer;
+}
+.topRight{
+	width: 586px;
+	height: 66px;
+	position: absolute;
+	display: inline-block;
+	text-align: right;
+	box-sizing: border-box;
+	padding: 6px 8px 0 0;
+	right: 0;
+}
+.topRight span:first-child{
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 15px;
+	background:url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/sendtomobile/icon_sendtomobile1e9c5d.png);
+	background-position: -128px 0;
+	cursor: pointer;
+}
+.topRight .search{
+	width: 235px;
+	height: 18px;
+	display: inline-block;
+	position: relative;
+	background: white;
+	padding: 1px 21px;
+	top: 18px;
+	left: 2px;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px #E6E6E6 inset;	
+}
+.topRight .search input{
+	display: inline-block;
+	width: 235px;
+	height: 18px;
+	border: none;
+}
+.topRight .search input:focus{
+	outline: none;
+}
+
+.topRight .search span{
+	display: inline-block;
+	width: 18px;
+	height: 16px;
+	position: absolute;
+}
+.topRight .search span:first-child{
+	background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/smartsearch1e9c5d.png) -3px -3px no-repeat;
+	left: 2px;
+	top: 2px;
+	
+}
+.topRight .search span:nth-child(2){
+	background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/smartsearch1e9c5d.png) -27px -4px no-repeat;
+	right: 2px;
+	top: 3px;	
+}
+/*主体左*/
+/*上*/
+.main{
+	width: 100%;
+	height: calc(100% - 66px);
+}
+.mainLeft{
+	width: 187px;
+	background: #e8ebef;
+	height: 100%;
+	display: inline-block;
+}
+.mainLeft .navBar{
+	width: 187px;
+	height: 95px;
+	padding-top: 10px;
+	border-bottom: 1px solid #BFC8D8;
+}
+.navBar ul li{
+	color: #354b66;
+	font-weight: bold;	
+	margin-top: 6px;
+	height: 24px;
+}
+.navBar ul li:hover{
+	background-color: rgb(214,219,224);
+}
+.navBar ul li:first-child{
+	margin-top: 0;
+}
+.navBar ul li span{
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+	margin-left: 23px;
+}
+.navBar ul li a{
+	padding-left: 10px;
+	width: 129px;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 14px;
+	color: #354b66;
+}
+.navBar ul li:first-child > span{
+	background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/cca1e9c5d.gif) -1px 0 no-repeat;	
+}
+.navBar ul li:nth-child(2) > span{
+	background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/cca1e9c5d.gif) 0 -33px no-repeat;	
+}
+.navBar ul li:nth-child(3) > span{
+	background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/cca1e9c5d.gif) 0 -63px no-repeat;	
+}
+/*中*/
+.main .navMidbar{
+	width: 184px;
+	margin-top: 5px;
+	padding-bottom: 5px;
+}
+.navMidbar ul li{	
+	margin-top: 3px;
+	height: 22px;
+}
+.navMidbar ul li:hover{
+	background-color: rgb(214,219,224);
+}
+.navMidbar ul li:first-child,.navMidbar ul li:nth-child(3){
+	margin-top: 0;
+}
+.navMidbar ul li span{
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	vertical-align: middle;
+	background: url(star.png);
+}
+.navMidbar ul li a{
+	padding-left: 24px;
+	width: 129px;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 12px;
+	color: #354b66;
+}
+.navMidbar ul li:nth-child(1),.navMidbar ul li:nth-child(3){
+	font-size: 14px;
+	font-weight: bold;
+}
+/*其他邮箱*/
+.navOther a{
+	display: inline-block;
+}
+.navOther a{
+	width: 187px;
+}
+.navOther p{	
+	width: 158px;
+	margin: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 21px;
+	border-bottom: 1px solid #BFC8D8;
+	border-top: 1px solid #BFC8D8;
+	color: #354b66;
+}
+/*下部*/
+.main .navBot{
+	width: 184px;
+	margin-top: 5px;
+	padding-bottom: 5px;
+}
+.navBot ul li{	
+	margin-top: 3px;
+	height: 22px;
+}
+.navBot ul li:not(.two):hover{
+	background-color: rgb(214,219,224);
+}
+.navBot ul li span{
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	vertical-align: middle;
+	background: url(star.png);
+}
+.navBot ul li a{
+	padding-left: 24px;
+	width: 129px;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 12px;
+	color: #354b66;
+}
+.navBot ul li.two a{
+	width: 28px;
+	padding-left: 24px;
+}
+.navBot ul li.two a:nth-child(2){
+	width: 43px;
+	padding-left: 5px;
+}
+.navBot ul li.two a:hover{
+	background-color: rgb(214,219,224);
+}
+/*主体右*/
+/*上午好*/
+.mainRight{
+	width: calc(100% - 187px);
+	height: 100%;
+	display: inline-block;
+	float: right;
+	position: relative;
+}
+.todayMain{
+	width: calc(100% - 320px);
+	margin-right: 320px;
+	padding-left: 8px;
+	height: 123px;
+}
+.updateInfo{
+	padding: 19px 0 0 6px;
+	height: 110px;
+	width: 100%;
+}
+.updateInfo ul li{
+	white-space: nowrap;
+}
+.updateInfo ul li:first-child{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 0 5px;
+	height: 21px;
+}
+.updateInfo ul li:first-child a{
+	color: #3D5E86;
+	font-size: 16px;
+	font-weight: bold;
+}
+.updateInfo ul li:nth-child(2) > span{
+	display: inline-block;
+	vertical-align: top;
+	width: 16px;
+	height: 16px;
+	background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/mail327a44.png) -48px -16px no-repeat;
+}
+.updateInfo ul li:nth-child(3){
+	padding: 8px 0 0 19px;
+	line-height: 22px;
+	font-size: 14px;
+	
+}
+.updateInfo ul li:nth-child(3) a{
+	color: #3D5E86;
+	display: inline-block;
+	height: 24px;
+	margin: 0 10px 0 0;
+	font-size: 14px;
+	font-weight: bold;
+}
+/*左侧推荐*/
+.leftRec{
+	width: calc(100% - 311px);
+	margin-right: 300px;
+	padding-left: 8px;
+	height: 232px;
+	margin-top: 25px;
+	white-space: nowrap;
+	
+}
+.tipsTitle{
+	padding-top: 5px;
+	height: 23px;
+	background: #f4f6f8;
+	border: 1px solid #C8CFDA;
+	padding-left: 10px;
+}
+.tipsTitle a{
+	color: #3D5E86;
+	font-size: 14px;
+}
+.tipsBooktop{
+	padding: 0 2px 2px 2px;
+	height: 83px;
+	border: 1px solid #C8CFDA;
+	border-top: none;
+}
+.tipsBooktop a span{
+	width: 690px;
+	background: url(https://rescdn.qqmail.com/zh_CN/todaybar/20181009qywx_1x.png);
+	display: inline-block;
+	height: 83px;
+	margin-right: 8px;
+	background-repeat: no-repeat;
+}
+.tipsBottom{
+	width: 100%;
+	height: 102px;
+	border: 1px solid #C8CFDA;
+	border-top: none;
+	box-sizing: border-box;
+}
+/*右侧提醒*/
+.rightNotice{
+	position: absolute;
+	width: 300px;
+	right: 0;
+	top: 148px;
+	
+}
+.rightNoIn{
+	border: 1px solid #C8CFDA;
+	height: 216px;
+	background-color: white;
+}
+</style>
+</head>
+<body>
+<!-- 头部 -->
+<div class="top">
+ <div class="logo">
+  <a href="#">
+   <img src="https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/logo/logo_210_01e9c5d.gif"/>	
+  </a>
+ </div>	
+ <div class="topLeft">
+  <p><span>Username</span><a href="" class="link">&lt;Username@qq.com&gt;</a></p>
+  <a href="">邮箱首页</a>&nbsp;<span>|</span>&nbsp;<a href="">设置</a>&nbsp;<span>-</span>&nbsp;<a href="">换肤</a>
+ </div>
+ <div class="topRight">
+  <p><span></span>&nbsp;<span>|</span>&nbsp;<a href="">反馈建议</a>&nbsp;<span>|</span>&nbsp;<a href="">帮助中心</a>&nbsp;<span>|</span>&nbsp;<a href="">退出</a></p>
+  <div class="search">
+   <span></span>
+   <span></span>
+   <input type="text" placeholder="邮件搜索" name=""/>
+  </div>
+ </div>
+</div>
+<!-- 主体 -->
+<div class="main">
+<!-- 主体左 -->
+ <div class="mainLeft">
+  <div class="navBar">
+   <ul>
+    <li><span></span><a href="#">写信</a></li>
+    <li><span></span><a href="#">收信</a></li>
+    <li><span></span><a href="#">通讯录</a></li>
+   </ul>
+  </div>
+  <div class="navMidbar">
+   <ul>
+    <li><a href="#">收件箱</a></li>
+    <li><a href="#">星标邮件<span></span></a></li>
+    <li><a href="#">群邮箱</a></li>
+    <li><a href="#">草稿箱</a></li>
+    <li><a href="#">已发送</a></li>
+    <li><a href="#">已删除</a></li>
+    <li><a href="#">垃圾箱</a></li>
+    <li><a href="#">QQ邮件订阅</a></li>
+   </ul>
+  </div>
+  <div class="navOther">
+   <a href="#"><p>其他邮箱</p></a>
+  </div>
+  <div class="navBot">
+   <ul>
+   	<li><a href="#">漂流瓶</a></li>
+   	<li class="two"><a href="#">日历</a>&nbsp;|&nbsp;<a href="#">记事本</a></li>
+   	<li><a href="#">在线文档</a></li>
+   	<li><a href="#">附件收藏</a></li>
+   	<li><a href="#">文件中转站</a></li>
+   	<li class="two"><a href="#">贺卡</a>&nbsp;|&nbsp;<a href="#">明信片</a></li>
+   	<li><a href="#">阅读空间</a></li>
+   </ul>
+  </div>
+ </div>
+ <!-- 主体右 -->
+ <div class="mainRight">
+  <!-- 上午好 -->
+  <div class="todayMain">
+   <div class="updateInfo">
+    <ul>
+    	<li>上午好，<a href="">Username</a></li>
+    	<li><span></span>&nbsp;邮件：<b>0</b>&nbsp;封未读邮件</li>
+    	<li><a href="">进入收件箱</a><a href="">漂流瓶</a><a href="">订阅中心</a></li>
+    </ul>
+   </div>
+  </div>
+  <!-- 左侧推荐 -->
+  <div class="leftRec">
+   <div class="tipsTitle">
+   	<a href="">邮箱推荐</a>
+   </div>
+   <div class="tipsBooktop">
+	<a href=""><span></span></a>
+   </div>
+   <ul class="tipsBottom">
+   	<li></li>
+   	<li></li>
+   	<li></li>
+   	<li></li>
+   	<li></li>
+   	<li></li>
+   </ul>
+  </div> 
+  <!-- 右侧提醒 -->
+  <div class="rightNotice">
+   <div class="rightNoIn">
+  </div>
+ </div>
+</div>
+
+</body>
+</html>
