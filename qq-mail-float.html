@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style type="text/less">
+*{
+  margin:0;
+  padding:0;
+}
+html,body{
+  height:100%;
+}
+.head{
+  width:100%;
+  height:200px;
+  background:blue;
+}
+.main{
+  width:100%;
+  height:100%;
+}
+.left{
+  width:300px;
+  height:100%;
+  background:red;
+  float:left;
+  
+}
+.right{
+  width:calc(100% - 300px);
+  height:100%;
+  background:grey;
+  float:right;
+}
+</style>
+</head>
+<body>
+<div class="head"></div>
+<div class="main">
+  <div class="left"></div>
+  <div class="right"></div>
+</div>
+<script src="less.min.js"></script>
+</body>
+</html>
