@@ -10,49 +10,67 @@
 }
 html,body{
   height:100%;
+  min-width:1000px;
 }
-.main{
-  width:100%;
-  .left,.rightOne,.rightTwo{
-    width:200px;
-    height:1000px;
-  }
-  .left{
-    background:black;
-    float:left;
-  }
-  .rightOne{
-    background:yellow;
-    float:right;
-  }
-  .rightTwo{
-    background:blue;
-    float:right;
-  }
+.container{
+	height:100%;
+	padding-left:150px;
+	padding-right:300px;
+
 }
 .middle{
-    width:auto;
-    height:1000px;
-    background:red;
-    overflow:hidden;
+	width:100%;
 
+	height:100%;
+	background:red;
+	
 }
-
+.left{
+	width:150px;
+	height:100%;
+	background:pink;
+	margin-left:-100%;
+	left:-150px;
+	
+}
+.right{
+	width:300px;
+	height:100%;
+	background:blue;
+	margin-left:-300px;
+	left:300px;
+	
+}
+.middle,.right,.left{
+	position:relative;
+	float:left;
+}
+.rightO,.rightT{
+	width:150px;
+	height:100%;
+	float:left;
+}
+.rightO{
+	background:blue;
+}
+.rightT{
+	background:yellow;
+}
 </style>
 </head>
 <body>
-<div class="main">
-  <div class="left">
-  </div>
-  <div class="rightOne">
-  </div>
-  <div class="rightTwo">
-  </div>
+<div class="container">
+	<div class="middle">
+		中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中
+	</div>
+	<div class="left">
+		左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左左
+	</div>
+	<div class="right">
+		<div class="rightO">右右右右右右右右右右右右右右右右右右右右右右右右右右右</div>
+		<div class="rightT">右右右右右右右右右右右右右右右右右右右右右右右右右右右</div>
+	</div>
 </div>
-<div class="middle">
-  123333333333 123333333333 123333333333 123333333333 123333333333 123333333333 123333333333 123333333333 123333333333 123333333333 123333333333 123333333333 123333333333 123333333333 
-</div>
-
 <script src="less.min.js"></script>
 </body>
 </html>
