@@ -186,6 +186,9 @@ var index=0,
 	size=pics.length,
 	dotts=document.querySelectorAll(".dotts span");
 
+var t=setInterval(function(){
+	changeImg();
+},2000)
 
 next.addEventListener("click",function(){
 	index++;
@@ -218,6 +221,7 @@ for(var y=0;y<size;y++){
 		changeImg();
 	})
 }
+
 </script>
 </body>
 </html>
