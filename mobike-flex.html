@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+article{
+	overflow: hidden;
+}
+section{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 3px;
+	margin-left: -6px;
+	margin-right: -6px;
+}
+div{
+	height: 200px;
+	border: 3px solid white;
+	box-sizing: border-box;
+	background-color: red;
+	flex-grow: 1;
+	width: 300px;
+}
+@media (max-width:1193px){
+	div{
+		width: 34%;
+	}
+}
+@media (max-width:593px){
+	div{
+		width: 300px;
+	}
+}
+</style>
+</head>
+<body>
+<article>
+		<section>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+		</section>
+</article>
+
+</body>
+</html>
