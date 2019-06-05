@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width">
+<title>JS Bin</title>
+<style id="jsbin-css">
+* {
+  background-color: rgba(0,0,0,0.08);
+}
+article{
+  height: 360px;
+  width: 360px;
+  background: white;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot{
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+}
+.secondHand{
+  display: inline-block;
+  width: 4px;
+  height: 156px;
+  background: black;
+  transform: rotate(180deg);
+  transform-origin: center 10px;
+  transition: transform .2s cubic-bezier(.4,2.08,.55,.44);
+}
+</style>
+</head>
+<body>
+<article>
+  <div class="dot">
+    <div class="secondHand"></div>
+  </div>
+</article>
+<script>
+var secHand=document.querySelectorAll('.secondHand');
+setInterval(function() {
+    for (var i = 0; i < secHand.length; i++) {
+      if (secHand[i].agl === undefined) {
+        secHand[i].agl = 6;
+      } else {
+        secHand[i].agl += 6;
+      }
+      secHand[i].style.transform = 'rotate(' + (180 + secHand[i].agl) +'deg)';
+    }
+  }, 1000);
+</script>
+</body>
+</html>
