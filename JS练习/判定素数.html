@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+</title>
+<style>
+</style>
+</head>
+<body>
+<script>
+var n=parseInt(prompt("请输入大于1的数值"));
+var num=function(a){
+  var jdg=true;
+  if(a==2){
+    return jdg;
+  }else if(a > 2){
+    for(i=2;i<a;i++){
+      if(a % i ==0){
+        jdg=false;
+        break;
+      }
+    }
+  }else{
+    return '请输入大于1的数值';
+  }
+  return jdg;
+}
+alert(num(n));
+</script>
+</body>
+</html>
