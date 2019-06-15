@@ -272,68 +272,118 @@
     }
 </script>
 <script type="stop" id="ch0104/14">
-    var N=Number(prompt("请输入大于0的正整数N"));
-    if(N%2==0){
-        console.log('even');
-    }else if(N%2 !=0){
-        console.log('odd');
-    } 
+    var N=Number(prompt("请输入重量N"));
+    var jdg=prompt("请输入是否加急(y或n)");
+    var basic=8,
+        aboveBasic=8+4*Math.ceil((N-1000)/500);
+    if(N<=1000 && jdg=='n'){
+        console.log(basic);
+    }else if(N>1000 && jdg=='n'){
+        console.log(aboveBasic);
+    }else if(N<=1000 && jdg=='y'){
+        console.log(basic+5);
+    }else if(N>1000 && jdg=='y'){
+        console.log(aboveBasic+5);
+    }
 </script>
 <script type="stop" id="ch0104/15">
-    var N=Number(prompt("请输入大于0的正整数N"));
-    if(N%2==0){
-        console.log('even');
-    }else if(N%2 !=0){
-        console.log('odd');
-    } 
+    var a=Number(prompt("请输入整数a"));
+    var b=Number(prompt("请输入整数b"));
+    var c=Number(prompt("请输入整数c"));
+    console.log(Math.max(a,b,c));
 </script>
 <script type="stop" id="ch0104/16">
-    var N=Number(prompt("请输入大于0的正整数N"));
-    if(N%2==0){
-        console.log('even');
-    }else if(N%2 !=0){
-        console.log('odd');
-    } 
+    var a=Number(prompt("请输入a"));
+    var b=Number(prompt("请输入b"));
+    var c=Number(prompt("请输入c"));
+    a+b>c>a-b
+    a+c>b>a-c
+    b+c>a>b-c
+    if(a+b>c && Math.abs(a-b)<c){
+        console.log('yes');
+    }else if(a+c>b && Math.abs(a-c)<b){
+        console.log('yes');
+    }else if(b+c>a && Math.abs(b-c)<a){
+        console.log('yes');
+    }else{
+        console.log('no');
+    }
 </script>
 <script type="stop" id="ch0104/17">
-    var N=Number(prompt("请输入大于0的正整数N"));
-    if(N%2==0){
-        console.log('even');
-    }else if(N%2 !=0){
-        console.log('odd');
+    var N=Number(prompt("请输年份"));
+    if(N%400==0 && N%3200!=0 || N%4==0 && N%100!=0 && N%3200!=0){
+        console.log('Y');
+    }else{
+        console.log('N');
     } 
 </script>
 <script type="stop" id="ch0104/18">
-    var N=Number(prompt("请输入大于0的正整数N"));
-    if(N%2==0){
-        console.log('even');
-    }else if(N%2 !=0){
-        console.log('odd');
+    var x=Number(prompt("请输入x"));
+    var y=Number(prompt("请输入y"));
+    if((x>=-1 && x<=1) && (y>=-1 && y<=1)){
+        console.log('yes');
+    }else{
+        console.log('no');
     } 
 </script>
-<script type="stop" id="ch0104/19">
-    var N=Number(prompt("请输入大于0的正整数N"));
-    if(N%2==0){
-        console.log('even');
-    }else if(N%2 !=0){
-        console.log('odd');
-    } 
+<script type="stop"  id="ch0104/19">
+    var a=Number(prompt("请输入a"));
+    var b=Number(prompt("请输入b"));
+    var jdg=prompt("请输入jdg");
+    function add(){
+        return a+b;
+    }
+    function sub(){
+        return a-b;
+    }
+    function mul(){
+        return a*b;
+    }
+    function div(){
+        if(b==0){
+            return 'Divided by zero!'
+        }else{
+            return a/b;
+        }
+    }
+    function calc(a,b,jdg){
+        if(jdg=='+'){
+            return add();
+        }else if(jdg=='-'){
+            return sub();
+        }else if(jdg=='*'){
+            return mul();
+        }else if(jdg=='/'){
+            return div();
+        }else{
+            return 'Invalid operator!';
+        }
+    }
+    console.log(calc(a,b,jdg));
 </script>
 <script type="stop" id="ch0104/20">
-    var N=Number(prompt("请输入大于0的正整数N"));
-    if(N%2==0){
-        console.log('even');
-    }else if(N%2 !=0){
-        console.log('odd');
-    } 
+    var a=Number(prompt("请输入a"));
+    var b=Number(prompt("请输入b"));
+    var c=Number(prompt("请输入c"));
+    var x1=(-b + Math.sqrt(b*b-4*a*c))/(2*a),
+        x2=(-b - Math.sqrt(b*b-4*a*c))/(2*a);
+    if(b*b == 4 * a * c){
+        console.log(x1.toFixed(5));
+        console.log(x2.toFixed(5));
+    }else if(b*b > 4 * a * c){
+        console.log(x1.toFixed(5));
+        console.log(x2.toFixed(5));
+    }else if(b*b < 4 * a * c){
+        console.log((-b/(2*a)).toFixed(5)+'+'+(Math.sqrt(4*a*c-b*b) / (2*a)).toFixed(5)+'i');
+        console.log((-b/(2*a)).toFixed(5)+'-'+(Math.sqrt(4*a*c-b*b) / (2*a)).toFixed(5)+'i');
+    }
 </script>
 <script type="stop" id="ch0104/21">
-    var N=Number(prompt("请输入大于0的正整数N"));
-    if(N%2==0){
-        console.log('even');
-    }else if(N%2 !=0){
-        console.log('odd');
-    } 
+    var N=Number(prompt("请输入苹果N"));
+    var x=Number(prompt("请输入x"));
+    var y=Number(prompt("请输入y"));
+    var remain=N-Math.ceil(y/x);
+    console.log(remain);
 </script>
 
 </body>
