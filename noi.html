@@ -459,14 +459,37 @@
 <script type="stop"  id="ch0105/07">
     var n=Number(prompt("请输入n"));
     var results=new Array(n);
+    var a=new Array(n);
+    var b=new Array(n);
     for(i=0;i<n;i++){
-        results[i]=Number(prompt("请输入数值"));
+        results[i]=prompt("请输入第"+(i+1)+"天的金 银 铜");
+        a[i]=results[i].split(' ');
     }
-    var all=results.reduce(function(x,y){
-        return x+y;
-    })
-    console.log(all);
-    console.log((all/n).toFixed(5));
+    var gold=0,silver=0,copper=0;
+    for(j=0;j<n;j++){
+        b[j]=a[j].map(function(x){
+            return x*1;
+        })
+    }
+    for(k=0;k<3;k++){
+        if(k==0){
+            for(var z=0;z<n;z++){
+                gold+=b[z][k];
+            }
+        }else if(k==1){
+            for(var z=0;z<n;z++){
+                silver+=b[z][k];
+            }
+        }else if(k==2){
+            for(var z=0;z<n;z++){
+                copper+=b[z][k];
+            }
+        }
+    }
+    console.log(gold);
+    console.log(silver);
+    console.log(copper);
+    console.log(gold+silver+copper);
 </script>
 <script type="stop"  id="ch0105/08">
     var n=Number(prompt("请输入n"));
