@@ -388,22 +388,20 @@
 
 <script type="stop" id="ch0105/01">
     var N=Number(prompt("请输入人数N"));
-    var x=prompt("请输入年龄x");
-    var b=x.split(' ');
-    var results=b.map(function(x){
-        return parseInt(x);
-    })
+    var results=new Array(N);
+    for(i=0;i<N;i++){
+        results[i]=Number(prompt("请输入第"+(i+1)+"名学生年龄"));
+    }
     var all=results.reduce(function(x,y){
         return x+y;
     })
     console.log((all/N).toFixed(2));
 </script>
 <script type="stop" id="ch0105/02">
-    var a=prompt("请输入a");
-    var b=a.split(' ');
-    var results=b.map(function(x){
-        return Number(x).toFixed(2)*1;
-    })
+    var results=new Array(12);
+    for(i=0;i<12;i++){
+        results[i]=Number(prompt("请输入"+(i+1)+"月结余"));
+    }
     var all=results.reduce(function(x,y){
         return x+y;
     })
