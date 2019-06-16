@@ -622,18 +622,28 @@
     }
 </script>
 <script type="stop"  id="ch0105/19">
-    
-</script>
-<script type="stop"  id="ch0105/20">
-    var m=Number(prompt("请输入m"));
     var n=Number(prompt("请输入n"));
     var sum=0;
-    for(i=m;i<n+1;i++){
-        if(i%17==0){
-            sum+=i;
-        }
+    for(i=0;i<n;i++){
+        var a=Number(prompt("请输入a"));
+        var b=Number(prompt("请输入b"));
+        var c=Number(prompt("请输入c"));
+        sum+=Math.ceil(Math.sqrt(a*a+b*b)/50*2 + c*1+c*0.5);
     }
     console.log(sum);
+</script>
+<script type="stop" id="ch0105/20">
+    var h=Number(prompt("请输入h"));
+    var sum=h;
+    for(var i=2;;i++){
+        sum=sum+h;
+        h=h/2;
+        if(i==10){
+            console.log(sum.toFixed(4));
+            console.log((h/2).toFixed(7));
+            break;
+        }    
+    }
 </script>
 </body>
 </html>
