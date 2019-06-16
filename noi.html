@@ -407,6 +407,103 @@
     })
     console.log('$'+(all/12).toFixed(2));
 </script>
+<script type="stop" id="ch0105/03">
+    var n=Number(prompt("请输入n"));
+    var results=new Array(n);
+    for(i=0;i<n;i++){
+        results[i]=Number(prompt("请输入数值")).toFixed(1)*1;
+    }
+    var all=results.reduce(function(x,y){
+        return x+y;
+    })
+    console.log((all/n).toFixed(4));
+</script>
+<script type="stop"  id="ch0105/04">
+    var n=Number(prompt("请输入n"));
+    var results=new Array(n);
+    for(i=0;i<n;i++){
+        results[i]=Number(prompt("请输入数值"));
+    }
+    var all=results.reduce(function(x,y){
+        return x+y;
+    })
+    console.log(all);
+    console.log((all/n).toFixed(5));
+</script>
+<script type="stop"  id="ch0105/05">
+    var n=Number(prompt("请输入n"));
+    var results=new Array(n);
+    for(i=0;i<n;i++){
+        results[i]=Number(prompt("请输入数值"));
+    }-
+    var max=null;
+    var final=results.reduce(function(a,b){
+        return a=a>b?a:b;
+    })
+    console.log(final);
+</script>
+<script type="stop"  id="ch0105/06">
+    var n=Number(prompt("请输入n"));
+    var results=new Array(n);
+    for(i=0;i<n;i++){
+        results[i]=Number(prompt("请输入数值"));
+    }
+    var max=results.reduce(function(a,b){
+        return a=a>b?a:b;
+    })
+    var min=results.reduce(function(a,b){
+        return a=a>b?b:a;
+    })
+    console.log(max-min);
+</script>
+<script type="stop"  id="ch0105/07">
+    var n=Number(prompt("请输入n"));
+    var results=new Array(n);
+    for(i=0;i<n;i++){
+        results[i]=Number(prompt("请输入数值"));
+    }
+    var all=results.reduce(function(x,y){
+        return x+y;
+    })
+    console.log(all);
+    console.log((all/n).toFixed(5));
+</script>
+<script type="stop"  id="ch0105/08">
+    var n=Number(prompt("请输入n"));
+    var results=new Array(n);
+    for(i=0;i<n;i++){
+        results[i]=Number(prompt("请输入数值"));
+    }
+    var all=results.reduce(function(x,y){
+        return x+y;
+    })
+    console.log(all);
+    console.log((all/n).toFixed(5));
+</script>
+<script type="stop"  id="ch0105/09">
+    var n=Number(prompt("请输入n"));
+    var results=new Array(n);
+    for(i=0;i<n;i++){
+        results[i]=Number(prompt("请输入数值"));
+    }
+    var all=results.reduce(function(x,y){
+        return x+y;
+    })
+    console.log(all);
+    console.log((all/n).toFixed(5));
+</script>
+<script type="stop"  id="ch0105/10">
+    var n=Number(prompt("请输入n"));
+    var results=new Array(n);
+    for(i=0;i<n;i++){
+        results[i]=Number(prompt("请输入数值"));
+    }
+    var all=results.reduce(function(x,y){
+        return x+y;
+    })
+    console.log(all);
+    console.log((all/n).toFixed(5));
+</script>
 
 </body>
 </html>
