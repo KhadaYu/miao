@@ -386,5 +386,29 @@
     console.log(remain);
 </script>
 
+<script type="stop" id="ch0105/01">
+    var N=Number(prompt("请输入人数N"));
+    var x=prompt("请输入年龄x");
+    var b=x.split(' ');
+    var results=b.map(function(x){
+        return parseInt(x);
+    })
+    var all=results.reduce(function(x,y){
+        return x+y;
+    })
+    console.log((all/N).toFixed(2));
+</script>
+<script type="stop" id="ch0105/02">
+    var a=prompt("请输入a");
+    var b=a.split(' ');
+    var results=b.map(function(x){
+        return Number(x).toFixed(2)*1;
+    })
+    var all=results.reduce(function(x,y){
+        return x+y;
+    })
+    console.log('$'+(all/12).toFixed(2));
+</script>
+
 </body>
 </html>
