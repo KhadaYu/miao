@@ -1052,5 +1052,16 @@
         }
     }
 </script>
+<script type="stop" id="ch0105/45">
+    var k=Number(prompt("请输入数字k"));
+    var n,ans;
+    n=(Math.sqrt(1+8*k)-1)/2;
+    ans=n*(n+1)*(2*n+1)/6;
+    k-=n*(n+1)/2;
+    ans+=k*(n+1);
+    console.log(ans);
+</script>
+
+
 </body>
 </html>
