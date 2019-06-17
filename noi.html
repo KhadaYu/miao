@@ -374,8 +374,7 @@
         console.log(x1.toFixed(5));
         console.log(x2.toFixed(5));
     }else if(b*b < 4 * a * c){
-        console.log('x1'+'='+(-b/(2*a)).toFixed(5)+'+'+(Math.sqrt(4*a*c-b*b) / (2*a)).toFixed(5)+'i');
-        console.log('x2'+'='+(-b/(2*a)).toFixed(5)+'-'+(Math.sqrt(4*a*c-b*b) / (2*a)).toFixed(5)+'i');
+        console.log('x1'+'='+(-b/(2*a)).toFixed(5)+'+'+(Math.sqrt(4*a*c-b*b) / (2*a)).toFixed(5)+'i'+";"+'x2'+'='+(-b/(2*a)).toFixed(5)+'-'+(Math.sqrt(4*a*c-b*b) / (2*a)).toFixed(5)+'i');
     }
 </script>
 <script type="stop" id="ch0104/21">
@@ -729,10 +728,21 @@
     console.log(tmp); 
 </script>
 <script type="stop" id="ch0105/25">
-    var num=248;
-    console.log(num);
-    console.log(503);
-    console.log(305);
+var a,b,c,m=0,s=new Array(3);
+for(a=1;a<7&&m==0;a++)
+    for(b=0;b<7&&m==0;b++)
+        for(c=1;c<7&&m==0;c++)
+            if((c+b*7+a*49)==(c*81+b*9+a))
+            {
+                m=1;
+                s[0]=(c+b*7+a*49)
+                s[1]=(a*100+b*10+c);
+                s[2]=(c*100+b*10+a);
+                break;
+            }
+console.log(s[0]);
+console.log(s[1]);
+console.log(s[2]);
 </script>
 <script type="stop" id="ch0105/26">
     var n=Number(prompt("请输入n"));
