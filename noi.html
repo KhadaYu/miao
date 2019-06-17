@@ -1072,6 +1072,91 @@ console.log(s[2]);
     console.log(ans);
 </script>
 
+<script type="stop" id="7">
+    var n=Number(prompt("请输入n"));
+    function rel(a){
+        var b=a.toString();
+        if(a%7!=0 && b.indexOf('7')== -1){
+            return 'NO';
+        }else{
+            return 'YES';
+        }
+    }
+    console.log(rel(n));
+</script>
+<script type="stop" id="sort">
+    var arr=[];
+    for(i=0;i<3;i++){
+        var a=Number(prompt("请输入a"));
+        arr.push(a);
+    }
+    for(j=1;j<arr.length;j++){
+        var jdg=true;
+        for(k=0;k<arr.length-1;k++){
+            if(arr[k]>arr[k+1]){
+                var tmp=arr[k+1];
+                arr[k+1]=arr[k];
+                arr[k]=tmp;
+                jdg=false;
+            }
+        }
+        if(jdg==true){
+            for(m=0;m<arr.length;m++){
+                console.log(arr[m]);
+            }
+            break;
+        }
+    }
+</script>
+<script type="stop" id="narcissistic">
+    var a=Number(prompt("请输入a"));
+    var b=a.toString();
+    var sum=0;
+    for(i=0;i<b.length;i++){
+        sum=sum+Math.pow(b[i],3);
+    }
+    if(sum==a){
+        console.log('YES');
+    }else{
+        console.log('NO');
+    }
+</script>
 
+<script type="stop" id="narcissistics">     
+        function jdg(c){
+            var b=c.toString();
+            var sum=0;
+            for(j=0;j<b.length;j++){
+                sum=sum+Math.pow(b[j],3);
+            }
+            if(sum==c){
+                return c;
+            }
+        }
+        for(i=1;i<1000;i++){
+            if(jdg(i)!=undefined){
+                console.log(jdg(i));
+            }      
+        }
+</script>
+<script type="stop" id="palindrom">
+        var a=prompt("请输入a");
+        var c=a.split('');
+        var b=a.split('');
+        b.reverse();
+        var jdg=true;
+        for(i=0;i<b.length;i++){
+            console.log(b)
+            console.log(c)
+            if(b[i]!=c[i]){
+                jdg=false;
+            }
+        }
+        if(jdg==true){
+            console.log('YES');
+        }else{
+            console.log('NO');
+        }
+</script>
 </body>
 </html>
