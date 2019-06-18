@@ -644,7 +644,7 @@
         }    
     }
 </script>
-<script  id="ch0105/21">
+<script type="stop" id="ch0105/21">
     var N=Number(prompt("请输入N"));
     for(i=0;;i++){
         if(N%2!=0){
@@ -667,7 +667,7 @@
 <script type="stop" id="ch0105/22">
     var sum=0;
     var extra=0;
-    var count=[];
+    var count=0;
     var allExtra=0;
     for(i=1;i<13;i++){
         var a=Number(prompt("请输入a"));
@@ -677,12 +677,12 @@
             allExtra=allExtra+extra;
             sum=sum-extra;
         }else if(sum<0){
-            count.push(i);
+            count=i;
         }      
     }
-    if(count!=null){
-        console.log(-count[0]);
-    }else if(count==null){
+    if(count!=0){
+        console.log(-count);
+    }else if(count==0){
         console.log(sum+allExtra*1.2);
     }
 </script>
@@ -836,11 +836,19 @@ console.log(s[2]);
             }
         }             
     }
+    var all='';
     for(var j=0;j<arr.length;j++){
         if(arr[j]==0){
-            console.log(j+1);
+            all=all+(j+1).toString()+',';
         }
     }
+    var b=all.split('');
+    b.splice(b.length-1,1)
+    var c='';
+    for(var j=0;j<b.length;j++){
+        c=c+b[j];
+    }
+    console.log(c);
 </script>
 <script type="stop" id="ch0105/32">
     var n=Number(prompt("请输入n"));
