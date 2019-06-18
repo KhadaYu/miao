@@ -1085,12 +1085,14 @@ console.log(s[2]);
     function rel(a){
         if(a==''){
             return 'NO';
-        }else if(a%7!=0 && a.indexOf('7')== -1){
-            return 'NO';
-        }else{
-            return 'YES';
-        }         
-    }
+        }else if(a!=''){
+            if(a%7!=0 && a.indexOf('7')== -1){
+                return 'NO';
+            }else{
+                return 'YES';
+            }
+        }
+    }              
     console.log(rel(n));
 </script>
 <script type="stop" id="sort">
