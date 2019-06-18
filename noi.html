@@ -1116,7 +1116,11 @@ console.log(s[2]);
         sum=sum+Math.pow(b[i],3);
     }
     if(sum==a){
-        console.log('YES');
+        if(sum.toString().length==3){
+            console.log('YES');
+        }else{
+            console.log('NO');
+        }    
     }else{
         console.log('NO');
     }
@@ -1135,7 +1139,9 @@ console.log(s[2]);
         }
         for(i=1;i<1000;i++){
             if(jdg(i)!=undefined){
-                console.log(jdg(i));
+                if(i.toString().length==3){
+                    console.log(jdg(i));
+                }            
             }      
         }
 </script>
@@ -1146,8 +1152,6 @@ console.log(s[2]);
         b.reverse();
         var jdg=true;
         for(i=0;i<b.length;i++){
-            console.log(b)
-            console.log(c)
             if(b[i]!=c[i]){
                 jdg=false;
             }
