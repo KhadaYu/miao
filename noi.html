@@ -644,7 +644,7 @@
         }    
     }
 </script>
-<script type="stop" id="ch0105/21">
+<script  id="ch0105/21">
     var N=Number(prompt("请输入N"));
     for(i=0;;i++){
         if(N%2!=0){
@@ -1073,10 +1073,9 @@ console.log(s[2]);
 </script>
 
 <script type="stop" id="7">
-    var n=Number(prompt("请输入n"));
+    var n=prompt("请输入n");
     function rel(a){
-        var b=a.toString();
-        if(a%7!=0 && b.indexOf('7')== -1){
+        if(a%7!=0 && a.indexOf('7')== -1 || a==''){
             return 'NO';
         }else{
             return 'YES';
