@@ -23,21 +23,117 @@
     ctx.fillStyle = color
     ctx.fillRect(x, y, 1, 1)
   }
+  //1
+  for(var a=50;a<=350;a++){
+    dot(a,50,'red');
+  }
+  //2
+  for(var a=50;a<=350;a++){
+    if(a%2==0){
+      dot(a,60,'red');
+    }else{
+      dot(a,60,'white');
+    }
+  }
+  //3
+  var tmp=0;
+  for(var a=50;a<=350;a++){
+    if(tmp<=1){
+      dot(a,70,'red');
+      tmp++;
+    }else if(tmp>=2&&tmp<=3){
+      dot(a,70,'white');
+      tmp++;
+      if(tmp==4){
+        tmp=0;
+      }
+    }
+  }
+  //4
+  var tmp=0;
+  for(var a=50;a<=350;a++){
+    if(tmp<=2){
+      dot(a,80,'red');
+      tmp++;
+    }else if(tmp>=3&&tmp<=4){
+      dot(a,80,'white');
+      tmp++;
+      if(tmp==5){
+        tmp=0;
+      }
+    }
+  }
+  //5
+  for(var a=0;a<=50;a++){
+    dot(a,a,'red');
+  }
+  //6
+  for(var a=0;a<=400;a++){
+    dot(a,0.75*a,'green');
+  }
+  //7
+  for(var a=50;a<=150;a++){
+    dot(a,10,'green');
+    dot(a,20,'green');
+  }
+  for(var a=10;a<=20;a++){
+    dot(50,a,'green');
+    dot(150,a,'green');
+  }
+  //8
+  for(var a=10;a<=20;a++){
+    for(var b=50;b<=150;b++){
+      dot(b,a,'green')
+    }
+  }
+  //10
+
+  for(var y=150;y<=170;y++){
+    for(var x=50;x<=70;x++){
+      if(Math.pow(x-60,2)+Math.pow(y-160,2)==100){
+        dot(x,y,'green');
+      }else{
+        dot(x,y,'white')
+      }     
+    }
+  }
+  //11
+
+  for(var y=200;y<=220;y++){
+    for(var x=50;x<=70;x++){
+      if(Math.pow(x-60,2)+Math.pow(y-210,2)<=100){
+        dot(x,y,'green');
+      }else{
+        dot(x,y,'white')
+      }     
+    }
+  }
+  //12
+
+  for(var y=-1;y<=1;y++){
+    for(var x=0;x<=2*Math.PI;x++){
+      if(y=sinx){
+        dot(x,y,'green')
+      }
+      
+    }
+  }
+
   /**
    * YOUR TASK
 画图的题：
-画一条实线
-画一条一个实点一个空点的虚线
-画一条两个实点两个空点的虚线
-画一条三个实点两个空点的虚线
-画一条45度的斜线
-画一条跨越画布左上角和右下角的对角线
-画一个空心矩形
-画一个实心矩形
-画一个rgb色彩空间的某一面
-画一个空心的圆
-画一个实心的圆
-画一个大小合适的sin(x)的图像
+1画一条实线
+2画一条一个实点一个空点的虚线
+3画一条两个实点两个空点的虚线
+4画一条三个实点两个空点的虚线
+5画一条45度的斜线
+6画一条跨越画布左上角和右下角的对角线
+7画一个空心矩形
+8画一个实心矩形
+9画一个rgb色彩空间的某一面
+10画一个空心的圆
+11画一个实心的圆
+12画一个大小合适的sin(x)的图像
    */
 </script>
 <script>
