@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UFT-8">
+<title>正则表达式测试工具</title>
+<link rel="stylesheet" href="sy3.css">
+</head>
+<body>
+<div id="regexp">
+    <h1 class="title">正则表达式测试工具</h1>
+    <textarea id="userText" class="textbox" placeholder="再次输入待匹配的文本"></textarea>
+    <p>
+        正则表达式：<input type="text" id="userRegExp" class="textfield" placeholder="在此输入正则表达式">
+        <input type="checkbox" name="userModifier" value="i">忽略大小写
+        <input type="checkbox" name="userModifier" value="g">全局匹配
+        <input type="checkbox" name="userModifier" value="m">多行匹配
+        <input type="button" id="matchingBtn" value="测试匹配">
+    </p>
+    <textarea id="matchingResult" class="textbox" disabled="disabled"></textarea>
+</div>
+<script>
+var userText=document.getElementById('userText'),
+    userRegExp=document.getElementById('userRegExp'),
+    userModifier=document.getElementsByName('userModifier'),
+    matchingBtn=document.getElementById('matchingBtn'),
+    matchingResult=document.getElementById('matchingResult'),
+    modifier='';
+for(i=0;i<userModifier.length;i++){
+    userModifier[i].onclick=function(){
+        modifier='';
+        for(j=0;j<userModifier.length;j++){
+            if(userModifier[j].checked){
+                modifier+=userModifier[j].value;
+            }      
+        }
+    }
+}
+matchingBtn.onclick=function(){
+    if(!userText.value){
+        alert('请输入待匹配的文本');
+        userText.focus();
+        return;
+    }
+    if(userRegExp.value==''){
+        alert('请输入正则表达字符');
+        userRegExp.focus();
+        return;
+    }
+    var pattern=new RegExp(userRegExp.value,modifier);
+    matchingResult.value=pattern.exec(userText.value)||'没有匹配';
+
+    
+}
+
+</script>
+</body>
+</html>
