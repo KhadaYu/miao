@@ -99,8 +99,8 @@
   }
   //11
 
-  for(var y=200;y<=220;y++){
-    for(var x=50;x<=70;x++){
+  for(var y=200;y<=220;y+=0.1){
+    for(var x=50;x<=70;x+=0.1){
       if(Math.pow(x-60,2)+Math.pow(y-210,2)<=100){
         dot(x,y,'green');
       }else{
