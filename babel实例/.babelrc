@@ -1,0 +1,13 @@
+{
+    "presets": [
+        [
+            "env",
+            {
+                "targets":{
+                    "browsers":["last 1 version"]//编译出来的版本兼容最新浏览器
+                }
+            }
+        ]
+    ],
+    "plugins": ["transform-class-properties"]
+}

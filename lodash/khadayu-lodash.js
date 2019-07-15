@@ -1,5 +1,5 @@
-var khadayu={
-    assign:function(){
+var khadayu = {
+    assign: function () {
         return null;
     }
 }
